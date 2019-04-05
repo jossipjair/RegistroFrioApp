@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlanco"
+    tools:context=".vista.RegistraPucho">
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="              REGISTRO DE PUCHOS"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAzul"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/lblUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="63dp"
+        android:background="@color/colorNegro"
+        android:text="               UBICACIÓN"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtUbicacionFrio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:inputType="textCapCharacters"
+        android:layout_below="@+id/lblUbicacion"
+        android:layout_marginStart="0dp"
+        android:hint="Ubicación Túnel "
+        android:textAlignment="center"
+        android:maxLength="20"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/lblPaleta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtUbicacionFrio"
+        android:background="@color/colorNegro"
+        android:text="             LECTURA PALETA"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtNumPaleta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPaleta"
+        android:hint="Número Paleta - Pucho"
+        android:inputType="textCapCharacters"
+        android:maxLength="50"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnRegistraPaletaFrioPucho"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtNumPaleta"
+        android:background="@color/colorAzul"
+        android:text="REGISTRA PUCHO"
+        android:textColor="@color/colorBlanco"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlanco"
+        android:background="@color/colorNegro"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btnRegistraPaletaFrioPucho"
+        android:text="         N° PALETA                            FECHA Y HORA"/>
+
+    <GridView
+        android:id="@+id/dgvPaletasFrioPucho"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:layout_below="@id/title"
+        android:numColumns="2"></GridView>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:text="Cantidad Puchos:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblCantidadPaletaPucho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCerrarPaletaPucho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView13"
+        android:layout_marginTop="-60dp"
+        android:background="@color/colorRojo"
+        android:text="Cerrar Paleta"
+        android:textColor="@color/colorBlanco"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</RelativeLayout>
