@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.jescalaya.appmovimientopaletafrio.R;
 
@@ -37,6 +38,7 @@ public class Login extends AppCompatActivity {
                     VariableGeneral.privilegio = 0;
                     Intent intent = new Intent(Login.this, MenuPrincipal.class);
                     startActivity(intent);
+                    Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
                 }else if(txtUsuario.getText().toString().equals("ADMIN") && txtPassword.getText().toString().equals("jossip180218")){
                     VariableGeneral.privilegio = 1;
                     Intent intent = new Intent(Login.this, MenuPrincipal.class);
